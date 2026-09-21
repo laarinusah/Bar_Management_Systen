@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+
+*.sql
+*.sql.gz
+
+vendor/
+node_modules/
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+docker-compose.override.yml

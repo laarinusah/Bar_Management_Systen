@@ -1,0 +1,319 @@
+/* =========================================================
+   BAR MANAGEMENT SYSTEM
+   Main Application Stylesheet
+   ========================================================= */
+
+/* ---------- General ---------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.btn {
+    border-radius: 7px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 7px;
+}
+
+
+/* ---------- Dashboard Cards ---------- */
+
+.dashboard-card {
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card .card-body {
+    padding: 20px;
+}
+
+.dashboard-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+
+/* ---------- Page Header ---------- */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.page-header h2,
+.page-header h3 {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.page-header p {
+    margin-bottom: 0;
+    color: #6c757d;
+}
+
+
+/* ---------- Tables ---------- */
+
+.table {
+    vertical-align: middle;
+}
+
+.table thead th {
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.table-responsive {
+    border-radius: 10px;
+}
+
+
+/* ---------- Status Badges ---------- */
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ---------- Alerts ---------- */
+
+.alert {
+    border-radius: 8px;
+}
+
+
+/* ---------- POS ---------- */
+
+.pos-product {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pos-product:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.pos-cart {
+    position: sticky;
+    top: 20px;
+}
+
+.cart-item {
+    border-bottom: 1px solid #dee2e6;
+    padding: 12px 0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
+
+/* ---------- Receipt ---------- */
+
+.receipt-container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.receipt-header h2 {
+    margin-bottom: 5px;
+}
+
+.receipt-total {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* ---------- Reports ---------- */
+
+.report-stat {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.report-stat h3 {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.report-stat small {
+    color: #6c757d;
+}
+
+
+/* ---------- Search ---------- */
+
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    padding-left: 40px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+
+/* ---------- Empty States ---------- */
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: #6c757d;
+}
+
+.empty-state i {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+
+/* ---------- Stock Indicators ---------- */
+
+.stock-low {
+    font-weight: 600;
+}
+
+.stock-out {
+    font-weight: 600;
+}
+
+.stock-good {
+    font-weight: 600;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page-header .btn {
+        width: 100%;
+    }
+
+    .dashboard-card .card-body {
+        padding: 15px;
+    }
+
+    .dashboard-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+    .table {
+        font-size: 13px;
+    }
+
+    .receipt-container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .pos-cart {
+        position: static;
+        margin-top: 20px;
+    }
+
+}
+
+
+/* ---------- Small Phones ---------- */
+
+@media (max-width: 480px) {
+
+    .card-body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+}
